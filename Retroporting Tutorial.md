@@ -18,6 +18,8 @@
 
 1. Open up WoW.Export once it's open and you choose the 10.2.5/10.2.6 type in the search bar item/weapon/sword_2h_shalamayne_d_03.m2. This is the weapon we are going to use for this tutorial. Click on the button that says Export M2 / WMO (RAW). It will say successfully exported model you can either click the blue show file button or navigate to the wow.export folder in C:\Users\Your User\WoW.Export\Item\ObjectComponents\Weapon. (Also go to the textures tab of wow.export and type in interface/icons/inv_sword_2h_gladiatorshalamayne_c_01.blp. Side note this may not be the right item icon for this)
 
+![Screenshot](screenshots/ItemExport.png)    ![Screenshot](screenshots/ItemIcon.png) 
+
 2. Okay so now that we have the weapon we want to port export its time to run it through M2Mod. Open up M2mod then Tools -> TXID Remover. This will bring up a menu that will say m2 path. Click on the button with the three ... and open your m2 in there then click on convert. (If it's your first time opening M2mod it will freeze for a few seconds this is normal) Once it's done converting it'll prompt you to save thee file. Do so
 
 3. Now that we have the new m2 from TXID under M2 -> M2i in the source M2 section select the M2 file. Once you select it press okay and then the button Go! will become clickable click on that button. If successful on the bottom it will say Export Done. 
