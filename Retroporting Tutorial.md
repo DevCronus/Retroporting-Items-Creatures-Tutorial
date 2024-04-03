@@ -45,3 +45,29 @@
 13. Back go to MPQ Editor go into your DBCFiles client folder and drag those two dbc files into there and close the file. Once this is done don't forget to go back into your servers dbc files if you exported them from a patch and update them. If you opened the dbc files from the servers dbc you are fine. Now you are going to want to restart your server which will add your item into the game. 
 
 14. Once the server is restarted load up your game log in and add yourself your newly retropted item. 
+
+# Retroporting Creatures
+
+1. Open up WoW.Export once it's open and you choose the 10.2.5/10.2.6 type in the search bar creature/taurenprimalist_light/taurenprimalist_light.m2. Or you can choose any model of your liking. For this tutorial I am going to be using this model. Extract either this model or the model of your choice.
+
+2. Now that we have the extracted creature we want to retroport open up M2mod. Go to tools -> TXID Fix -> Load the creature m2 from the extraction folder. Once it's TXID Fixed go to M2 -> M2i and selected your creatures M2 files and Hit Go!. This creature doesn't need anything changed in the m2i stage so we are going right to M2i -> M2 and converting it back into M2. Hit preload wait for it to perload then hit GO!.
+
+3. Go to the export folder of M2mod which should be in the creatures folder with the M2 called export. You should see the m2 and all the .skin files all the ones that have _lod you want to rename them and removed the _lod. Example Taurenprimalist_light_lod01 goes to taurenprimalist_light01(side note if the base skin already as an 01 go to the next number 02 etc).
+
+4. Now that we changed the names of the skin files. Open the creature M2 in 010 editor and run Alastor's M2 template which you can install in the templates section of 010 editor. Once it loads in template results click the drop down and search for nviews. With our model by default it is set to 1 we are going to want to change that to the number of skin files we have. In this case the nviews value will change from 1 to 4. Once you change the value save the M2 file.
+
+5. Back in the export folder you are going to want to cut everything in the there so the skins and the m2 and paste it in the default creature folder. So in the taurenprimalist_light folder. It will ask you to replace 2 files which is the uneditd m2 and skin file. Hit replace
+
+6. Next we are going to want to open up our multiconverter and drag and drop everything in and hit the convert button.
+
+7. Okay so now we are going to open up two dbc files creaturemodeldata and creaturedisplayinfo. Inside of CreatureModelData we are going to look for Character\Tauren\Male and copy this line into a new line. We are not going to use this model but this will help us with model size and some creature sounds by default. We are going to change the ModelName to Creature\TaurenPrimalist_Light\TaurenPrimalist_Light.mdx then we are going to save this (Make sure you right down the entry number of this model). Now go into CreatureDisplayInfo and make a new line. Okay once you have a new line in ModelID you put the id of the line in CreatureModelData SoundID 0, ExtendDisplay 0, CreatureModelScale 1, CreatureModelAlpha 255, Nothing else needs to be touched for this model save the file.
+
+8. Next we are going to but the creature folder and these dbcs into a custom patch. Go into the MPQ Editor folder x64 and run the MPQEditor.exe. Once it opens make a new mpq file. Named it patch-C.mpq for this tutorial. Click on next and where it says Game Compatibility click on change and select World of Warcraft Wrath of the Lich King. Then click on next. For max amount put this value 256954. Okay then it should open up your mpq file.
+
+9. Okay so now you are going to want to click on the button that says new folder. Name it DBFilesClient this is the folder we are going to put our dbc files in. Once it's created on the left you will see two folders click on the one that has C:\ or whatever the drive is that you the mpq editor in. It ill bring you back out and you'll will now see the folder DBCFilesClient. Now in this folder you're going to want to drag and drop your dbc files into here. Then we are going to go out of the DBCFilesClient folder. Go to your wow.export directory which should be in users/username/wow.export in whatever drive your main one is. You'll see a folder called creature you are going to want to drag that into your patch. You should have two folders DBCFilesClient and Craeture. Exit the patch. (Side not both dbc files have to be in your servers dbc files)
+
+10. Next is database work.....Okay first we are going to go into creature_model_info and make a new entry here were are going to just copy the last line and change the entry value to the value of the display in creaturedisplayinfo. Then this step is done.
+
+11. Then we are going to go and create a new creature and we are going to give it the new custom display. (If you don't know how to create a new creature just copy any entry an just change the display id of the new entry created. I can create a tutorial for that if everyone really wants me to.)
+
+12. Okay now we are just going to want to restart the server. Once it's restarted add the creature and it should work.
