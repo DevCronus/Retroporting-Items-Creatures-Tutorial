@@ -10,7 +10,7 @@
 
 5) You are going to need any database editor. Navicat/HeidiSql is are good onese. You will also need database access which you should have if you are reading this tutorial. Or if you have TrinityCreator or Keira debating on which core you have. 
 
-6) Last but not least if you didn't download the tools I provided from https://drive.google.com/file/d/1yJ89gDPUe1kuJ6kThjZHX15JwxYjKs3H/view?usp=sharing go ahead and do this now unless you have your own tools. Which is great also. 
+6) Last but not least if you didn't download the tools I provided from [https://drive.google.com/file/d/1yJ89gDPUe1kuJ6kThjZHX15JwxYjKs3H/view?usp=sharing](https://drive.google.com/file/d/1Ux2NzYUVoIjvjh-Nnc_M9AWG2kbzfYGj/view?usp=sharing) go ahead and do this now unless you have your own tools. Which is great also. 
 
 # Retroporting An Item
 
